@@ -1,0 +1,169 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* BACKGROUND */
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #3a0ca3, #7209b7, #4361ee);
+  color: #fff;
+}
+
+/* MAIN CONTAINER */
+#container {
+  background: rgba(17, 17, 27, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px 30px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.8s ease;
+}
+
+/* TIMER DISPLAY */
+#timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+#timer > div {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(114, 9, 183, 0.4);
+  transition: transform 0.3s ease;
+}
+
+#timer > div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(0, 245, 212, 0.6);
+}
+
+#timer h2 {
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+#timer > h2 {
+  font-size: 2rem;
+  color: #00f5d4;
+}
+
+/* BUTTON SECTION */
+#btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+button {
+  background: linear-gradient(90deg, #00f5d4, #4361ee);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  margin: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(90deg, #7209b7, #00f5d4);
+  box-shadow: 0 6px 15px rgba(0, 245, 212, 0.5);
+}
+
+/* SAVED DATA SECTION */
+#data {
+  margin-top: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 10px;
+  color: #bbb;
+}
+
+#data h2 {
+  font-size: 18px;
+  color: #00f5d4;
+  margin-bottom: 8px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  #container {
+    width: 90%;
+    padding: 25px 15px;
+  }
+  #timer > div {
+    height: 80px;
+    width: 80px;
+  }
+  #timer h2 {
+    font-size: 1.6rem;
+  }
+}
+/* HEADER STYLING */
+.stopwatch-header {
+  text-align: center;
+  margin-bottom: 25px;
+  animation: fadeInDown 0.8s ease;
+}
+
+.stopwatch-header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00f5d4, #7209b7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.stopwatch-header p {
+  font-size: 15px;
+  color: #ccc;
+  letter-spacing: 0.4px;
+}
+
+/* Subtle fade-down animation */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
